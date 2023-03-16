@@ -1,0 +1,63 @@
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANACEA- iACT</title>
+    <link rel="stylesheet" href="stylesheets/regp1.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/410/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
+    </head>
+    <body background="images/bg.jpeg">
+    <div class="container">
+        <form id="myForm">
+            <label>Full Name</label>
+            <br/>
+            <input name="full_name" />
+            <br/>
+            <label>Email</label>
+            <br/>
+            <input name="email" />
+            <br/>
+            <label>USN</label>
+            <br/>
+            <input name="usn" />
+            <br/>
+            <label>College</label>
+            <br/>
+            <input name="college" />
+            <br/>
+            <label>ISA FACULTY COORDINATOR CODE</label>
+            <br/>
+            <input name="college_code" />
+            <br/>
+            <label>Accomodation Requirment</label>
+            <p>Limited Accomodation will be provided for students outside Bengaluru</p>
+            <br/>
+            <input type="radio" id="accomodation" name="age" value="30-31-1" /> 3 days(30th ,31st,1st)<br/>
+            <input type="radio" id="accomodation" name="age" value="30-31" />2 days(30th,31st) <br/>
+            <input type="radio" id="accomodation" name="age" value="31-1" />2 days(31st,1st) <br/>
+            <br/>
+            <br/>
+            <br/>
+          </form>
+          <button onclick="SubForm()">Submit</button> 
+    </div>
+    </body>
+</body>
+</html> 
