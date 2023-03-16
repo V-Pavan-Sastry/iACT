@@ -179,7 +179,7 @@ box-shadow: 0px 0px 15px 5px rgba(86, 243, 47, 0.75);
     .row{
         flex-direction: column-reverse;
         overflow-x: hidden;
-        overflow-y: auto;
+        overflow-y: hidden;
     }
     .col-1{
         width: fit-content;
